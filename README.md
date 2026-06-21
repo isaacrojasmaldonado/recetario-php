@@ -26,7 +26,7 @@ Sistema moderno de gestión de recetas con diseño premium.
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/recetario-laravel.git
+git clone https://github.com/isaacrojasmaldonado/recetario-php.git
 cd recetario-laravel
 
 # 2. Instalar dependencias PHP
