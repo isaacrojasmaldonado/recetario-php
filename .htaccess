@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirigir todo el tráfico a la carpeta /public
+    # Esto permite que el sitio cargue desde la raíz en hostings compartidos
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Bloquear el acceso a archivos sensibles en la raíz
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files .gitignore>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files composer.json>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files composer.lock>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files package.json>
+    Order allow,deny
+    Deny from all
+</Files>
