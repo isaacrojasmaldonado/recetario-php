@@ -1,0 +1,130 @@
+/* Tema Premium: Recetario Digital */
+
+:root {
+  --primary-color: #ff5733;
+  --secondary-color: #2c3e50;
+  --bg-color: #fdfaf6;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--secondary-color);
+  background-image: radial-gradient(#ff573315 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.recipe-header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.recipe-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Grilla de Tarjetas */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Tarjeta de Cocina */
+.recipe-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+.recipe-card-content {
+  padding: 20px;
+}
+
+.recipe-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.recipe-type-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.recipe-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.difficulty-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Filtros */
+.recipe-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-input {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Botones */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
