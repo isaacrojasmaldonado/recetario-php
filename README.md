@@ -21,32 +21,37 @@ Sistema moderno de gestión de recetas con diseño premium.
 - ✅ Doble confirmación al eliminar
 - ✅ Modal animado para crear/editar
 - ✅ Estadísticas en el header
+- 🚀 **Script de inicio rápido**: Incluye un archivo `.bat` para levantar el sistema con un clic.
 
-## 🚀 Instalación
+## 🚀 Instalación y Ejecución
 
+### Opción 1: Ejecución Rápida (Recomendada para el evaluador)
+Si tienes PHP, Composer y Node.js instalados en Windows:
+1. Asegúrate de tener una base de datos MySQL llamada `recetario`.
+2. Ejecuta el archivo `iniciar_recetario.bat`.
+   *   *Este script instalará dependencias (si faltan), ejecutará migraciones y levantará el servidor automáticamente.*
+
+### Opción 2: Instalación Manual
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/isaacrojasmaldonado/recetario-php.git
-cd recetario-laravel
+cd recetario-php
 
-# 2. Instalar dependencias PHP
+# 2. Instalar dependencias
 composer install
-
-# 3. Instalar dependencias JS
 npm install
 
-# 4. Configurar entorno
+# 3. Configurar entorno
 cp .env.example .env
-# Editar .env con tus datos de MySQL
+# Configura tus credenciales de base de Datos en el .env
 
-# 5. Generar clave de app
+# 4. Preparar la base de datos
 php artisan key:generate
+php artisan migrate --seed
 
-# 6. Crear tablas en la base de datos
-php artisan migrate
-
-# 7. Iniciar la aplicación
+# 5. Iniciar la aplicación
 php artisan serve
+# En otra terminal:
 npm run dev
 ```
 
